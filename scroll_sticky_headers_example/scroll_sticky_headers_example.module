@@ -1,0 +1,38 @@
+<?php
+
+function scroll_sticky_headers_example_menu() {
+  $items = array();
+  
+  $items['scroll_sticky_headers_example'] = array (
+    'title' => 'Example of Sticky Headers with Horizontal Scroll',
+    'access callback' => TRUE,
+    'page callback' => 'scroll_sticky_headers_example_stuff',
+  );
+  
+  return $items;
+}
+
+function scroll_sticky_headers_example_stuff () {
+  $header = array (
+    'First header', 'Second header', 'Third header',
+  );
+  
+  $rows = array();
+  
+  for ($i = 0; $i <40; $i++) {
+    $rows[$i] = array('lingua '.$i,'franca '.$i,'est '.$i);  
+  }
+
+  
+  $table = array (
+    'header' => $header,
+    'rows' => $rows,
+    'scroll sticky' => TRUE,
+    'attributes' => array('style' => array('width: 600px;')),
+    'container attributes' => array('style' => array('width: 200px;')),
+  );
+  $table_html = theme('scrollstickytable', $table);
+
+  return $table_html;
+  
+}

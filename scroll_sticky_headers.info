@@ -1,0 +1,3 @@
+name = Sticky headers with horizontal scroll
+description = Creates sticky headers that can be scrolled horizontally. Wrap your sticky table with with class scroll-sticky-enabled
+core = 7.x

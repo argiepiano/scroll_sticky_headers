@@ -1,0 +1,5 @@
+name = Example of Sticky Headers with Scroll
+description = Example of Sticky Headers with Horizontal Scroll
+core = 7.x
+package = custom
+dependencies[] = scroll_sticky_headers
