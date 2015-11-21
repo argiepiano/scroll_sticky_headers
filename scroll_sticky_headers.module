@@ -22,6 +22,22 @@ function scroll_sticky_headers_theme() {
     
     return $theme;    
 }
+/*
+ * A theme function that implements a table with a sticky header that can scroll horizontally.
+ *
+ * The JavaScript file scroll-tableheader.js was adapted from https://www.drupal.org/node/1307128
+ * The code for this function is largely based on theme_table() provided by Drupal
+ * This function adds a div wrapper around the header table, which is then manipulated in the JS file
+ * In order to define scroll-able sticky headers, be sure to pass
+ * $variable['scroll sticky'] => TRUE;
+ *
+ * $variable['container attribute'] should contain the width of the table containder.
+ * A css <code>overflow: scroll</code> is automatically added to the wrapper div
+ *
+ * $variable['attribute'] should pass the width of the table. In order for it to be horizontally scrollable,
+ * it needs to be larger than the width of the wrapper div
+ * 
+ */
 
 function theme_scrollstickytable($variables) {
   $header = $variables['header'];
